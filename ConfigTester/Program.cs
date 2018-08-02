@@ -19,7 +19,12 @@ namespace ConfigTester
             Console.WriteLine(testObject.SubObject.Int);
             Console.WriteLine(testObject.SubObject.Dec);
             Console.WriteLine(testObject.SubObject.Str);
+
+
+            TestObject missingObject = config.GetObject<TestObject>("MissingObject");
+
             Console.ReadKey();
+
         }
     }
 }

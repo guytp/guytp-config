@@ -145,8 +145,11 @@ namespace Guytp.Config
         /// </returns>
         public T GetObject<T>(string name, bool throwIfNotPresent = false)
         {
-            if (throwIfNotPresent && !_config.ContainsKey(name))
-                throw new Exception("Config section not defined: " + name);
+            if (!_config.ContainsKey(name))
+                if (throwIfNotPresent)
+                    throw new Exception("Config section not defined: " + name);
+                else
+                    return default(T);
             return _config[name].ToObject<T>();
         }
     }
