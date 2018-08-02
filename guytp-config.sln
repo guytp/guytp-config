@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2042
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "guytp-config", "guytp-config\guytp-config.csproj", "{2A524FFD-FF32-4D7D-87A9-B69A5A16A01C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConfigTester", "ConfigTester\ConfigTester.csproj", "{8932805E-571C-442C-A11C-EBB9547FF522}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2A524FFD-FF32-4D7D-87A9-B69A5A16A01C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A524FFD-FF32-4D7D-87A9-B69A5A16A01C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A524FFD-FF32-4D7D-87A9-B69A5A16A01C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A524FFD-FF32-4D7D-87A9-B69A5A16A01C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8932805E-571C-442C-A11C-EBB9547FF522}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8932805E-571C-442C-A11C-EBB9547FF522}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8932805E-571C-442C-A11C-EBB9547FF522}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8932805E-571C-442C-A11C-EBB9547FF522}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {27A528E5-A867-42D7-9220-09BF305268A5}
+	EndGlobalSection
+EndGlobal

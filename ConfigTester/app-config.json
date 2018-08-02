@@ -1,0 +1,23 @@
+﻿{
+  "AppSettings": {
+    "Test.Abc": "DefGhi",
+    "DoubleSetting": 1.259,
+    "ComplexSetting": {
+      "Setting1": 1,
+      "Setting2":  "ta da!"
+    }
+  },
+
+  "ConnectionStrings": {
+    "Default": "connection string"
+  },
+
+  "TestObject": {
+    "SubObject": {
+      "Int": 1,
+      "Dec": 1.52,
+      "Str": "testing 123"
+    },
+    "SomeValue": "Another value here"
+  }
+}
