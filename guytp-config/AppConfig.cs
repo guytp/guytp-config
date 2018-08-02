@@ -105,10 +105,16 @@ namespace Guytp.Config
         /// <param name="name">
         /// The name of the setting to retrieve.
         /// </param>
-        public T GetAppSetting<T>(string name)
+        /// <param name="throwIfNotPresent">
+        /// Throws an exception if the specified object is not present in the config, otherwise null is returned.
+        /// </param>
+        public T GetAppSetting<T>(string name, bool throwIfNotPresent = false)
         {
             if (!_appSettings.ContainsKey(name))
-                throw new Exception("Setting not defined: " + name);
+                if (throwIfNotPresent)
+                    throw new Exception("Setting not defined: " + name);
+                else
+                    return default(T);
             object obj = _appSettings[name];
             if (obj is JObject)
                 return ((JObject)obj).ToObject<T>();
@@ -121,10 +127,16 @@ namespace Guytp.Config
         /// <param name="name">
         /// The name of the connection string to retrieve.
         /// </param>
-        public string GetConnectionString(string name)
+        /// <param name="throwIfNotPresent">
+        /// Throws an exception if the specified object is not present in the config, otherwise null is returned.
+        /// </param>
+        public string GetConnectionString(string name, bool throwIfNotPresent = false)
         {
             if (!_connectionStrings.ContainsKey(name))
-                throw new Exception("Connection string not defined: " + name);
+                if (throwIfNotPresent)
+                    throw new Exception("Connection string not defined: " + name);
+                else
+                    return null;
             return _connectionStrings[name];
         }
 
