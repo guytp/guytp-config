@@ -137,12 +137,15 @@ namespace Guytp.Config
         /// <param name="name">
         /// The name of the key for the object.
         /// </param>
+        /// <param name="throwIfNotPresent">
+        /// Throws an exception if the specified object is not present in the config, otherwise null is returned.
+        /// </param>
         /// <returns>
         /// The object specified.
         /// </returns>
-        public T GetObject<T>(string name)
+        public T GetObject<T>(string name, bool throwIfNotPresent = false)
         {
-            if (!_config.ContainsKey(name))
+            if (throwIfNotPresent && !_config.ContainsKey(name))
                 throw new Exception("Config section not defined: " + name);
             return _config[name].ToObject<T>();
         }
